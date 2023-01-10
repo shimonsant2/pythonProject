@@ -43,4 +43,4 @@ for name, model in models:
 pyplot.boxplot(results, labels=names)
 pyplot.title('Algorithm Comparison')
 print("test")
-#pyplot.show()
+pyplot.show()
