@@ -7,6 +7,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.svm import SVC
 
 # Load dataset
+# url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
 url = "/Users/shimonsant/PycharmProjects/pythonProject/iris.csv"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset = read_csv(url, names=names)
