@@ -13,3 +13,7 @@ def test_answer2():
 
 def test_answer3():
     assert func(3) == 4
+
+
+def test_answer4():
+    assert func(44) == 45
