@@ -1,10 +1,13 @@
 # pytest example
+from numpy.random import random
+
+
 def func(x):
     return x + 1
 
 
 def test_answer1():
-    assert func(4) == 5
+    assert random(2) == 5
 
 
 def test_answer2():
@@ -16,4 +19,8 @@ def test_answer3():
 
 
 def test_answer4():
+    assert func(44) == 45
+
+
+def test_answer5():
     assert func(44) == 45
