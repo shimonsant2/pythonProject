@@ -1,5 +1,5 @@
 # pytest example
-from numpy.random import random
+import random
 
 
 def func(x):
@@ -7,7 +7,7 @@ def func(x):
 
 
 def test_answer1():
-    assert random(2) == 5
+    assert random.choice([10, 3]) == 3
 
 
 def test_answer2():
