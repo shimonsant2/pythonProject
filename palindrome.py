@@ -12,7 +12,17 @@ def isPalindrome(str):
 s = "malayalam1"
 ans = isPalindrome(s)
 
-if (ans):
+s2 = '1221'
+s3 = '12212'
+
+if ans:
     print("Yes")
 else:
     print("No")
+
+
+    def test_answer1():
+        assert isPalindrome(s2) == True
+
+    def test_answer2():
+        assert isPalindrome(s3) == False
