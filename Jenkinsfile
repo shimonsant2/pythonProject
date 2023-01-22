@@ -26,8 +26,8 @@ pipeline {
             branch "fix-*"
           }
           steps {
-            sh 'echo 'this only run for the fixes''
-            sh pwd
+             echo 'this only run for the fixes'
+            sh 'pwd'
            }
         }
         stage ('for the PR branch') {
@@ -35,7 +35,8 @@ pipeline {
             branch "PR-*"
           }
           steps {
-            sh 'echo 'this only run for the PRs''
+             echo 'this only run for the PRs'
+             sh 'pwd'
            }
         }
         stage('Running Unit tests') {
