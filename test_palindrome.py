@@ -12,8 +12,11 @@ def isPalindrome(str):
 s = "malayalam1"
 ans = isPalindrome(s)
 
-s2 = '1221'
-s3 = '12212'
+test_1 = '1221'
+test_2 = '1221221'
+test_3 = 'aaabbbcccbbbaaa'
+test_4 = 'ttttsfsfsfsfsfsfsfsfstttt'
+test_5 = 'ddd91ddd'
 
 if ans:
     print("Yes")
@@ -22,7 +25,19 @@ else:
 
 
     def test_answer1():
-        assert isPalindrome(s2) == True
+        assert isPalindrome(test_1) == True
+
 
     def test_answer2():
-        assert isPalindrome(s3) == False
+        assert isPalindrome(test_2) == True
+
+
+    def test_answer3():
+        assert isPalindrome(test_3) == True
+
+
+    def test_answer4():
+        assert isPalindrome(test_4) == True
+
+    def test_answer5():
+        assert isPalindrome(test_5) == False
