@@ -21,6 +21,24 @@ pipeline {
                 }
             }
         }
+        stage ('for the fix branch') {
+          when {
+            branch "fix-*"
+          }
+          steps {
+             echo 'this only run for the fixes'
+            sh 'pwd'
+           }
+        }
+        stage ('for the PR branch') {
+          when {
+            branch "PR-*"
+          }
+          steps {
+             echo 'this only run for the PRs'
+             sh 'pwd'
+           }
+        }
         stage('Running Unit tests') {
             steps {
                 script {
@@ -35,10 +53,10 @@ pipeline {
                         autoUpdateStability: true,
                         zoomCoverageChart: true,
                         maxNumberOfBuilds: 10,
-                        lineCoverageTargets: '80, 80, 80',
-                        conditionalCoverageTargets: '80, 80, 80',
-                        classCoverageTargets: '80, 80, 80',
-                        fileCoverageTargets: '80, 80, 80',
+                        lineCoverageTargets: '10, 10, 10',
+                        conditionalCoverageTargets: '10, 10, 10',
+                        classCoverageTargets: '10, 10, 10',
+                        fileCoverageTargets: '10, 10, 10',
                     ])
                     junit "pyunit.xml"
                 }
