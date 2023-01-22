@@ -29,7 +29,7 @@ pipeline {
             sh echo 'this only run for the fixes'
            }
         }
-        stage ('for the fix branch') {
+        stage ('for the PR branch') {
           when {
             branch "PR-*"
           }
