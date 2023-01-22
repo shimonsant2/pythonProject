@@ -21,6 +21,22 @@ pipeline {
                 }
             }
         }
+        stage ('for the fix branch') {
+          when {
+            branch "fix-*"
+          }
+          steps {
+            sh echo 'this only run for the fixes'
+           }
+        }
+        stage ('for the fix branch') {
+          when {
+            branch "PR-*"
+          }
+          steps {
+            sh echo 'this only run for the PRs'
+           }
+        }
         stage('Running Unit tests') {
             steps {
                 script {
