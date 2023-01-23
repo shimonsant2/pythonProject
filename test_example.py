@@ -19,7 +19,7 @@ def test_answer3():
 
 
 def test_answer4():
-    assert func(44) == 45
+    assert func(44) == 33
 
 
 def test_answer5():
