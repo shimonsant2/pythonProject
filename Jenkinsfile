@@ -13,8 +13,8 @@ pipeline {
         stage('Static Code Checking') {
             steps {
                 script {
-                    sh sudo touch pylint.log
-                    sudo chmod 777 pylint.log
+                    sh 'touch pylint.log'
+                    sh 'chmod 777 pylint.log'
                     sh 'find . -name '*.py' | xargs pylint -f parseable | tee pylint.log'
                     recordIssues(
                         tool: pyLint(pattern: 'pylint.log'),
