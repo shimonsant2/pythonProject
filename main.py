@@ -9,7 +9,7 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 
 if __name__ == '__main__':
-    print_hi('PyCharm-fix1234')
+    print_hi('PyCharm-newjenkins')
     print("Hello, World! test commit in jenkins")
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
