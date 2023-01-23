@@ -13,7 +13,7 @@ pipeline {
         stage('Static Code Checking') {
             steps {
                 script {
-                    sh 'scc.sh'
+                    sh './scc.sh'
                     recordIssues(
                         tool: pyLint(pattern: 'pylint.log'),
                         unstableTotalHigh: 100,
