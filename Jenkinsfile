@@ -13,9 +13,7 @@ pipeline {
         stage('Static Code Checking') {
             steps {
                 script {
-                    sh 'touch pylint.log'
-                    sh 'chmod 777 pylint.log'
-                    sh 'find . -name '*.py' | xargs pylint -f parseable | tee pylint.log'
+                    sh 'scc.sh'
                     recordIssues(
                         tool: pyLint(pattern: 'pylint.log'),
                         unstableTotalHigh: 100,
