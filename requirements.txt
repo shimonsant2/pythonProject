@@ -8,3 +8,4 @@ coverage >= 7.0.5
 unittest-xml >= 0.2.2
 unittest-xml-reporting >= 3.2.0
 pylint >= 2.15.10
+wheel >= 0.38.4
