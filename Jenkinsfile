@@ -14,9 +14,9 @@ pipeline {
             steps {
                 script {
                     echo '--Start pytest!!!'
-                    sh 'pwd'
-                    sh 'whoami'
                     sh 'sudo touch pylint.log'
+                    sh 'sudo chmod 777 pylint.log'
+                    sh 'sudo find . -name '*.py' | xargs pylint -f parseable | tee pylint.log'
                     echo '--Finish pytest!!!'
                     recordIssues(
                         tool: pyLint(pattern: 'pylint.log'),
