@@ -14,6 +14,7 @@ pipeline {
             steps {
                 script {
                     echo 'pytest!!!'
+                    pwd
                     recordIssues(
                         tool: pyLint(pattern: 'pylint.log'),
                         unstableTotalHigh: 100,
