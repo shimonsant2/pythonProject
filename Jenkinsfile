@@ -15,6 +15,7 @@ pipeline {
                 script {
                     echo '--Start pytest!!!'
                     sh 'pwd'
+                    sh 'whoami'
                     sh 'sudo touch pylint.log'
                     echo '--Finish pytest!!!'
                     recordIssues(
