@@ -13,8 +13,10 @@ pipeline {
         stage('Static Code Checking') {
             steps {
                 script {
-                    echo 'pytest!!!'
+                    echo '--Start pytest!!!'
                     sh 'pwd'
+                    sh 'sudo touch pylint.log'
+                    echo '--Finish pytest!!!'
                     recordIssues(
                         tool: pyLint(pattern: 'pylint.log'),
                         unstableTotalHigh: 100,
